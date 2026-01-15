@@ -1,9 +1,9 @@
-// HERO SLIDER
-const heroSlides = document.querySelectorAll(".hero-slide");
-let index = 0;
+// HERO SLIDER LOGIC
+const slides = document.querySelectorAll(".hero-slide");
+let current = 0;
 
 setInterval(() => {
-    heroSlides[index].classList.remove("active");
-    index = (index + 1) % heroSlides.length;
-    heroSlides[index].classList.add("active");
-}, 4000);
+    slides[current].classList.remove("active");
+    current = (current + 1) % slides.length;
+    slides[current].classList.add("active");
+}, 4000); // change image every 4 seconds
